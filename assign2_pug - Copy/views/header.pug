@@ -1,0 +1,21 @@
+//- block title 
+//-  title Home Page
+//-  a(href="/login") Login 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='home') Home<a href='/'>
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/about_us') About us
+        li.nav-item
+          a.nav-link(href='/gallary') Gallary
+        li.nav-item
+          a.nav-link(href='services') Services 
+        li.nav-item
+        a.nav-link(href='contact') Contact 
+         li.nav-item
+         a.nav-link(href='contact_details') Contact Details

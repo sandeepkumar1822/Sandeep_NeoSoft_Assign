@@ -1,0 +1,57 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  title Hello, world!
+include ./header.pug
+  link(rel="stylesheet", href="/static/style3.css")
+.formbold-main-wrapper
+  .formbold-form-wrapper
+    form(action='/contactData' method='POST')
+      .formbold-mb-5
+        label.formbold-form-label(for='name')  Full Name 
+        input#name.formbold-form-input(type='text' name='name' placeholder='Full Name')
+      .formbold-mb-5
+        label.formbold-form-label(for='phone')  Phone Number 
+        input#phone.formbold-form-input(type='text' name='phone' placeholder='Enter your phone number')
+      .formbold-mb-5
+        label.formbold-form-label(for='email')  Email Address 
+        input#email.formbold-form-input(type='email' name='email' placeholder='Enter your email')
+      .flex.flex-wrap.formbold--mx-3
+        .w-full.formbold-px-3(class='sm:w-half')
+          .formbold-mb-5.w-full
+            label.formbold-form-label(for='date')  Date 
+            input#date.formbold-form-input(type='date' name='date')
+        .w-full.formbold-px-3(class='sm:w-half')
+          .formbold-mb-5
+            label.formbold-form-label(for='time')  Time 
+            input#time.formbold-form-input(type='time' name='time')
+      .formbold-mb-5.formbold-pt-3
+        label.formbold-form-label.formbold-form-label-2
+          | Address Details
+        .flex.flex-wrap.formbold--mx-3
+          .w-full.formbold-px-3(class='sm:w-half')
+            .formbold-mb-5
+              input#area.formbold-form-input(type='text' name='area' placeholder='Enter area')
+          .w-full.formbold-px-3(class='sm:w-half')
+            .formbold-mb-5
+              input#city.formbold-form-input(type='text' name='city' placeholder='Enter city')
+          .w-full.formbold-px-3(class='sm:w-half')
+            .formbold-mb-5
+              input#state.formbold-form-input(type='text' name='state' placeholder='Enter state')
+          .w-full.formbold-px-3(class='sm:w-half')
+            .formbold-mb-5
+              input#post-code.formbold-form-input(type='text' name='post-code' placeholder='Post Code')
+        input#post-code.formbold-form-input(type='submit' value="Submit")
+
+// Optional JavaScript; choose one of the two!
+// Option 1: Bootstrap Bundle with Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+// Option 2: Separate Popper and Bootstrap JS
+//
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+include ./footer.pug
