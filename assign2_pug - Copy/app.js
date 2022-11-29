@@ -53,8 +53,9 @@ app.post("/contactData",(req,res)=>{
     var data2=data.toString();
     if(fs.existsSync(`./user`)){
         fs.appendFileSync(`./user/detail.pug`,`${data2}`)
-
+        res.render('Contact_Details');
     }
+
     else{
         fs.mkdirSync(`./user`)
         fs.writeFileSync(`./user/detail.pug`,`${data2}`)
